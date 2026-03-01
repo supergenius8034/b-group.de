@@ -142,95 +142,6 @@
             100% { transform: translateY(-100vh) scale(0.5); opacity: 0; }
         }
 
-        .location-form {
-            margin-top: 2.5rem;
-            background: rgba(255, 215, 0, 0.08);
-            border: 1px solid rgba(255, 215, 0, 0.3);
-            border-radius: 12px;
-            padding: 2rem;
-            text-align: left;
-        }
-
-        .location-form h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            color: #ffd700;
-            margin-bottom: 0.5rem;
-            text-align: center;
-        }
-
-        .location-form .form-subtitle {
-            font-size: 0.95rem;
-            color: #f0d860;
-            text-align: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .location-form label {
-            display: block;
-            font-size: 0.9rem;
-            color: #f5ecc0;
-            margin-bottom: 0.3rem;
-            font-weight: 600;
-        }
-
-        .location-form input,
-        .location-form textarea {
-            width: 100%;
-            padding: 0.7rem 1rem;
-            margin-bottom: 1rem;
-            border: 1px solid rgba(255, 215, 0, 0.3);
-            border-radius: 8px;
-            background: rgba(0, 0, 0, 0.3);
-            color: #fff8dc;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1rem;
-            outline: none;
-            transition: border-color 0.2s;
-        }
-
-        .location-form input:focus,
-        .location-form textarea:focus {
-            border-color: #ffd700;
-        }
-
-        .location-form input::placeholder,
-        .location-form textarea::placeholder {
-            color: #8a7a40;
-        }
-
-        .location-form textarea {
-            resize: vertical;
-            min-height: 80px;
-        }
-
-        .location-form button {
-            display: block;
-            width: 100%;
-            padding: 0.8rem;
-            background: linear-gradient(135deg, #ffd700, #e6c200);
-            color: #1a1400;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1rem;
-            font-weight: 600;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: opacity 0.2s;
-        }
-
-        .location-form button:hover {
-            opacity: 0.9;
-        }
-
-        .location-form .form-success {
-            display: none;
-            text-align: center;
-            color: #ffd700;
-            font-size: 1.1rem;
-            padding: 1rem 0;
-        }
-
         footer {
             position: fixed;
             bottom: 1rem;
@@ -267,35 +178,7 @@
         <div class="badge">
             <span>Est. 2026</span>
         </div>
-
-        <div class="location-form" id="locationForm">
-            <h2>📍 Nächstes Treffen</h2>
-            <p class="form-subtitle">Schlage eine Location vor!</p>
-            <form id="meetingForm" onsubmit="submitForm(event)">
-                <label for="name">Dein Name</label>
-                <input type="text" id="name" name="name" placeholder="z.B. Max" required>
-
-                <label for="location">Location</label>
-                <input type="text" id="location" name="location" placeholder="z.B. Augustiner Keller, München" required>
-
-                <label for="notes">Anmerkungen (optional)</label>
-                <textarea id="notes" name="notes" placeholder="Warum dort? Besonderheiten?"></textarea>
-
-                <button type="submit">🍺 Vorschlag einreichen</button>
-            </form>
-            <div class="form-success" id="formSuccess">
-                ✅ Danke für deinen Vorschlag! Prost! 🍻
-            </div>
-        </div>
     </div>
-
-    <script>
-        function submitForm(e) {
-            e.preventDefault();
-            document.getElementById('meetingForm').style.display = 'none';
-            document.getElementById('formSuccess').style.display = 'block';
-        }
-    </script>
 
     <footer>&copy; 2026 B-Group. Alle Rechte vorbehalten.</footer>
 </body>
